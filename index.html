@@ -1,37 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Focus Space</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cute Pomodoro Timer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Stay Focused and Win 🚀</h1>
-        <p id="quote">"Success is the sum of small efforts, repeated day in and day out."</p>
-
-        <div class="timer">
-            <h2 id="timer-label">Work Time</h2>
-            <div id="time">50:00</div>
-            <div class="controls">
-                <button onclick="startTimer()">Start</button>
-                <button onclick="resetTimer()">Reset</button>
-            </div>
-            <div class="customize">
-                <input type="number" id="workMinutes" placeholder="Work (mins)" min="1" max="180">
-                <input type="number" id="breakMinutes" placeholder="Break (mins)" min="1" max="60">
-                <button onclick="customizeTimer()">Set Custom Timer</button>
-            </div>
-        </div>
-
-        <div class="spotify">
-            <h2>Vibes While Working 🎵</h2>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdPec7aLTmlC" 
-                width="300" height="380" frameborder="0" allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
+  <h1>✨ Cute Pomodoro Timer ✨</h1>
+  <div class="timer-container">
+    <div class="time" id="pomodoro">25:00</div>
+    <div class="buttons">
+      <button onclick="startPomodoro()">Start</button>
+      <button onclick="resetPomodoro()">Reset</button>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <div class="countdown" id="countdown"></div>
+
+  <div class="media-embeds">
+    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9tPFwDMOaN1" width="300" height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <iframe width="300" height="170" src="https://www.youtube.com/embed/QZbuj3RJcjI" allowfullscreen></iframe>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
